@@ -14,7 +14,13 @@ yarn add --dev @johh/eslint-config
 npm i -D @johh/eslint-config
 ```
 
-Then add the following `.eslintrc` file to your projects root:
+Then add its `peerDependencies` to your projects `devDependencies`. This is required because ESLint will try to resolve plugins in the current working directory.
+
+```
+npx install-peerdeps @johh/eslint-config --dev
+```
+
+Add the following `.eslintrc` file to your projects root:
 
 ```json
 {
