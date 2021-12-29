@@ -6,7 +6,7 @@
   "repository": "github:johh/eslint-config",
   "author": "johh <code@johh.net>",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^8.5.0",
