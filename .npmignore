@@ -1,0 +1,4 @@
+.DS_Store
+.nvmrc
+tsconfig.eslint.json
+yarn-error.log
