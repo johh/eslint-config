@@ -1,4 +1,5 @@
 .DS_Store
 .nvmrc
+.prettierignore
 tsconfig.eslint.json
 yarn-error.log
