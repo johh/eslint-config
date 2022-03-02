@@ -5,6 +5,7 @@ module.exports = {
 		'airbnb/hooks',
 		'plugin:jasmine/recommended',
 		'plugin:json/recommended',
+		'plugin:jsdoc/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'airbnb-typescript',
 	],
@@ -15,6 +16,16 @@ module.exports = {
 		serviceworker: true,
 		node: true,
 		jasmine: true,
+	},
+	settings: {
+		jsdoc: {
+			mode: 'typescript',
+			tagNamePreference: {
+				fires: {
+					replacement: 'emits',
+				},
+			},
+		},
 	},
 	parserOptions: {
 		project: './tsconfig.eslint.json',
@@ -101,5 +112,11 @@ module.exports = {
 				ignoreFunctionalComponents: true,
 			},
 		],
+		'jsdoc/check-indentation': 1,
+		'jsdoc/check-line-alignment': 1,
+		'jsdoc/require-description': 1,
+		'jsdoc/require-property-type': 0,
+		'jsdoc/require-returns-type': 0,
+		'jsdoc/require-param-type': 0,
 	},
 };
