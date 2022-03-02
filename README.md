@@ -4,23 +4,15 @@ An opinionated ESLint config based on [`eslint-config-airbnb`](https://www.npmjs
 
 ## Usage
 
-First install the package:
-
-```
-yarn add --dev @johh/eslint-config
-```
-
-```
-npm i -D @johh/eslint-config
-```
-
-Then add its `peerDependencies` to your projects `devDependencies`. This is required because ESLint will try to resolve plugins in the current working directory.
+First, install the package _and_ its `peerDependencies` to your projects `devDependencies` using
 
 ```
 npx install-peerdeps @johh/eslint-config --dev
 ```
 
-Add the following `.eslintrc` file to your projects root:
+This is required because ESLint will try to resolve plugins in the current working directory. `yarn` will be used if there's a `yarn.lock` file already present in your project.
+
+Then add the following `.eslintrc` file to your projects root:
 
 ```json
 {
