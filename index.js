@@ -145,5 +145,23 @@ module.exports = {
 		'jsdoc/require-property-type': 0,
 		'jsdoc/require-returns-type': 0,
 		'jsdoc/require-param-type': 0,
+		'jsdoc/require-jsdoc': [
+			'warn',
+			{
+				publicOnly: true,
+				require: {
+					FunctionDeclaration: true,
+					ClassDeclaration: true,
+					MethodDefinition: false,
+				},
+				checkConstructors: false,
+				contexts: [
+					'MethodDefinition[accessibility="public"]',
+					'PropertyDefinition[accessibility="public"]',
+					'TSEnumDeclaration',
+				],
+				enableFixer: false,
+			},
+		],
 	},
 };
