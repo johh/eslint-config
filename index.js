@@ -90,13 +90,26 @@ module.exports = {
 				count: 2,
 			},
 		],
-		'padding-line-between-statements': [
+		'padding-line-between-statements': 0,
+		'@typescript-eslint/padding-line-between-statements': [
 			'error',
-			{ blankLine: 'always', prev: '*', next: 'return' },
-			{ blankLine: 'always', prev: '*', next: 'export' },
-			{ blankLine: 'always', prev: '*', next: 'function' },
-			{ blankLine: 'always', prev: '*', next: 'class' },
-			{ blankLine: 'always', prev: ['break', 'return'], next: ['case', 'default'] },
+			{
+				blankLine: 'always',
+				prev: '*',
+				next: [
+					'export',
+					'return',
+					'function',
+					'class',
+					'default',
+					'interface',
+					'type',
+				],
+			},
+			{ blankLine: 'always', prev: ['const', 'let'], next: '*' },
+			{ blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
+			{ blankLine: 'always', prev: 'export', next: '*' },
+			{ blankLine: 'any', prev: 'export', next: 'export' },
 		],
 		'@typescript-eslint/explicit-member-accessibility': [
 			'error',
