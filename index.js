@@ -104,12 +104,29 @@ module.exports = {
 					'default',
 					'interface',
 					'type',
+					'const',
+					'let',
 				],
 			},
-			{ blankLine: 'always', prev: ['const', 'let'], next: '*' },
-			{ blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
-			{ blankLine: 'always', prev: 'export', next: '*' },
-			{ blankLine: 'any', prev: 'export', next: 'export' },
+			{
+				blankLine: 'always',
+				prev: [
+					'export',
+					'const',
+					'let',
+				],
+				next: '*',
+			},
+			{
+				blankLine: 'any',
+				prev: 'export',
+				next: 'export',
+			},
+			{
+				blankLine: 'any',
+				prev: ['const', 'let'],
+				next: ['const', 'let'],
+			},
 		],
 		'@typescript-eslint/explicit-member-accessibility': [
 			'error',
