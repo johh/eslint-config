@@ -1,6 +1,6 @@
 {
   "name": "@johh/eslint-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Opinionated typescript eslint config based on airbnb",
   "main": "index.js",
   "repository": "github:johh/eslint-config",
